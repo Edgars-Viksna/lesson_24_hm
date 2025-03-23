@@ -13,23 +13,15 @@ public class Main {
 
         System.out.println(" ------ home, class work -------");
 
-Student.homeWork(studentList, "Ervin", "Green");
-Student.classWork(studentList, "barby", "black");
+        Student.homeWork(studentList, "Ervin", "Green");
+        Student.classWork(studentList, "barby", "black");
 
         System.out.println(" ------- Print list -------");
         Students.printStudents(studentList);
 
 
-
-
-
     }
     //-------------- Methods ---------------
-
-
-
-
-
 
 
 }

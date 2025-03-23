@@ -59,7 +59,7 @@ public class Student {
         }
     }
 
-    public static void classWork (List<Student> list, String firstName, String lastName){
+    public static void classWork(List<Student> list, String firstName, String lastName) {
         for (Student student : list) {
             if (student.getFirstName().equalsIgnoreCase(firstName) &&
                     student.getLastName().equalsIgnoreCase(lastName)) {
