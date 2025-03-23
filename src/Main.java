@@ -7,9 +7,9 @@ public class Main {
         List<Student> studentList = new ArrayList<>();
         studentList.add(new Student("Adam", "White", "adam.white@gmail.com", "Group 1a"));
         studentList.add(new Student("Barby", "Black", "barby.black@gmail.com", "Group 1a"));
-        studentList.add(new Student("Cecil", "Braun", "cecil.braun@gmail.com", "Group 1a"));
-        studentList.add(new Student("Daniel", "Blue", "daniel.blue@gmail.com", "Group 1a"));
-        studentList.add(new Student("Ervin", "Green", "ervin.green@gmail.com", "Group 1a"));
+        studentList.add(new Student("Cecil", "Braun", "cecil.braun@gmail.com", "Group 22b"));
+        studentList.add(new Student("Daniel", "Blue", "daniel.blue@gmail.com", "Group 22b"));
+        studentList.add(new Student("Ervin", "Green", "ervin.green@gmail.com", "Group 3a"));
 
         System.out.println(" ------ home, class work -------");
 
