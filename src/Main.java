@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -17,7 +19,19 @@ public class Main {
         Student.classWork(studentList, "barby", "black");
 
         System.out.println(" ------- Print list -------");
-        Students.printStudents(studentList);
+        Students.print(studentList);
+
+        System.out.println("------- sort by rating ----------");
+
+//        Collections.sort(studentList, new SortByRating());
+        Collections.sort(studentList, Students.comparatorByRating());
+        Students.print(studentList);
+
+        System.out.println("-----sort by name -------");
+        Collections.sort(studentList, Students.comparatorByLastName());
+        Students.print(studentList);
+
+
 
 
     }
