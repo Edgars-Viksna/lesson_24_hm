@@ -33,6 +33,15 @@ public class Students {
         return result1;
     }
 
+    public static void checkStudent(List<Student> list, String firstName, String lastName) {
+        for (Student student : list) {
+            if (student.getFirstName().equalsIgnoreCase(firstName)
+                    && student.getLastName().equalsIgnoreCase(lastName)) {
+                System.out.println("This list contains student ");
+                System.out.println(student);
+            }
+        }
+    }
 
 }
 

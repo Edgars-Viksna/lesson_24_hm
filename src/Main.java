@@ -41,6 +41,9 @@ public class Main {
         System.out.println("------- predicate by group----------");
         Students.print(Students.filter(studentList, new PredicateByGroup("group 22b")));
 
+        System.out.println("------- check Student in the list----------");
+        Students.checkStudent(studentList, "barby", "black");
+
 
     }
     //-------------- Methods ---------------
