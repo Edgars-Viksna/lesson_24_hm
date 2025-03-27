@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,8 +12,7 @@ public class Main {
         studentList.add(new Student("Daniel", "Blue", "daniel.blue@gmail.com", "Group 22b"));
         studentList.add(new Student("Ervin", "Green", "ervin.green@gmail.com", "Group 3a"));
 
-        System.out.println(" ------ home, class work -------");
-
+        System.out.println(" ------ home + class work -------");
         Student.homeWork(studentList, "Ervin", "Green");
         Student.homeWork(studentList, "Ervin", "Green");
         Student.homeWork(studentList, "Ervin", "Green");
@@ -28,8 +26,6 @@ public class Main {
         Students.print(studentList);
 
         System.out.println("------- sort by rating ----------");
-
-//        Collections.sort(studentList, new SortByRating());
         Collections.sort(studentList, Students.comparatorByRating());
         Students.print(studentList);
 
@@ -37,10 +33,13 @@ public class Main {
         Collections.sort(studentList, Students.comparatorByLastName());
         Students.print(studentList);
 
-
-
         System.out.println("------- predicate ----------");
-        Students.print(Students.filter(studentList));
+
+        System.out.println("------- predicate by rating----------");
+        Students.print(Students.filter(studentList, new PredicateStudentByLowRating(1.0)));
+
+        System.out.println("------- predicate by group----------");
+        Students.print(Students.filter(studentList, new PredicateByGroup("group 22b")));
 
 
     }

@@ -23,17 +23,15 @@ public class Students {
         return comparator;
     }
 
-    public static List<Student> filter(List<Student> list) {
-        List<Student> result = new ArrayList<>();
+    public static List<Student> filter(List<Student> list, PredicateStudent predicat) {
+        List<Student> result1 = new ArrayList<>();
         for (Student student : list) {
-            if (new PredicateStudentByLowRating().test(student)) {
-                result.add(student);
+            if (predicat.test(student)) {
+                result1.add(student);
             }
         }
-        return result;
+        return result1;
     }
-
-
 
 
 }
