@@ -48,6 +48,14 @@ public class Students {
         }
     }
 
+    public static List<String> extract(List<Student> list, Extractor extractor) {
+        List<String> result = new ArrayList<>();
+        for (Student student : list) {
+            result.add(extractor.extract(student));
+        }
+        return result;
+    }
+
 
 }
 

@@ -45,9 +45,18 @@ public class Main {
         Students.checkStudent(studentList, "barby", "black");
         Students.checkStudent(studentList, "barby", "white");
 
+        System.out.println("------- extractors ----------");
+        printList(Students.extract(studentList, new ExtractorByFirstLastNameGroup()));
+        printList(Students.extract(studentList, new ExtractByLastNameEmail()));
+
 
     }
     //-------------- Methods ---------------
 
+    public static void printList(List<String> list) {
+        for (String string : list) {
+            System.out.println(string);
+        }
+    }
 
 }
