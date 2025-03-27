@@ -43,6 +43,7 @@ public class Main {
 
         System.out.println("------- check Student in the list----------");
         Students.checkStudent(studentList, "barby", "black");
+        Students.checkStudent(studentList, "barby", "white");
 
 
     }

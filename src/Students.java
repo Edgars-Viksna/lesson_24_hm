@@ -34,14 +34,20 @@ public class Students {
     }
 
     public static void checkStudent(List<Student> list, String firstName, String lastName) {
+        boolean found = false;
         for (Student student : list) {
             if (student.getFirstName().equalsIgnoreCase(firstName)
                     && student.getLastName().equalsIgnoreCase(lastName)) {
-                System.out.println("This list contains student ");
-                System.out.println(student);
+                found = true;
+                System.out.println("This list contain student " + firstName + " " + lastName);
+                break;
             }
         }
+        if (found == false) {
+            System.out.println("This list does not contain student " + firstName + " " + lastName);
+        }
     }
+
 
 }
 
