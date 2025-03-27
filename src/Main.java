@@ -16,6 +16,12 @@ public class Main {
         System.out.println(" ------ home, class work -------");
 
         Student.homeWork(studentList, "Ervin", "Green");
+        Student.homeWork(studentList, "Ervin", "Green");
+        Student.homeWork(studentList, "Ervin", "Green");
+
+
+        Student.classWork(studentList, "barby", "black");
+        Student.classWork(studentList, "barby", "black");
         Student.classWork(studentList, "barby", "black");
 
         System.out.println(" ------- Print list -------");
@@ -32,6 +38,9 @@ public class Main {
         Students.print(studentList);
 
 
+
+        System.out.println("------- predicate ----------");
+        Students.print(Students.filter(studentList));
 
 
     }
