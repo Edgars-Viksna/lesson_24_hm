@@ -16,12 +16,10 @@ public class Main {
         studentList1.add(new Student("Laura", "Orange", "laura.orange@gmail.com", "Group 22b"));
         studentList1.add(new Student("Norbert", "Purple", "norbert.purple@gmail.com", "Group 3a"));
 
-
         System.out.println(" ------ home + class work -------");
         Student.homeWork(studentList, "Ervin", "Green");
         Student.homeWork(studentList, "Ervin", "Green");
         Student.homeWork(studentList, "Ervin", "Green");
-
 
         Student.classWork(studentList, "barby", "black");
         Student.classWork(studentList, "barby", "black");
@@ -34,11 +32,11 @@ public class Main {
         Collections.sort(studentList, Students.comparatorByRating());
         Students.print(studentList);
 
-        System.out.println("-----sort by name -------");
+        System.out.println("-----sort by last name -------");
         Collections.sort(studentList, Students.comparatorByLastName());
         Students.print(studentList);
 
-        System.out.println("------- predicate ----------");
+        System.out.println("------- predicates ----------");
 
         System.out.println("------- predicate by rating----------");
         Students.print(Students.filter(studentList, new PredicateStudentByLowRating(1.0)));
@@ -56,10 +54,6 @@ public class Main {
 
         System.out.println("------- Merging two lists ----------");
         Students.print(Students.mergeTwoLists(studentList, studentList1));
-
-
-
-
 
 
     }

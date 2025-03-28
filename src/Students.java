@@ -39,12 +39,12 @@ public class Students {
             if (student.getFirstName().equalsIgnoreCase(firstName)
                     && student.getLastName().equalsIgnoreCase(lastName)) {
                 found = true;
-                System.out.println("This list contain student " + firstName + " " + lastName);
+                System.out.println("This list contain student: " + student);
                 break;
             }
         }
         if (found == false) {
-            System.out.println("This list does not contain student " + firstName + " " + lastName);
+            System.out.println("This list does not contain student: " + firstName + " " + lastName);
         }
     }
 
@@ -56,16 +56,9 @@ public class Students {
         return result;
     }
 
-    public static List<Student> mergeTwoLists (List<Student> list1, List<Student> list2) {
-
-        List<Student> one = list1;
-        List<Student> two = list2;
-        List<Student> result = new ArrayList<>();
-
-        for (Student student : one) {
-            result.add(student);
-        }
-        for (Student student : two){
+    public static List<Student> mergeTwoLists(List<Student> list1, List<Student> list2) {
+        List<Student> result = new ArrayList<>(list1);
+        for (Student student : list2) {
             result.add(student);
         }
         return result;
