@@ -56,6 +56,21 @@ public class Students {
         return result;
     }
 
+    public static List<Student> mergeTwoLists (List<Student> list1, List<Student> list2) {
+
+        List<Student> one = list1;
+        List<Student> two = list2;
+        List<Student> result = new ArrayList<>();
+
+        for (Student student : one) {
+            result.add(student);
+        }
+        for (Student student : two){
+            result.add(student);
+        }
+        return result;
+    }
+
 
 }
 

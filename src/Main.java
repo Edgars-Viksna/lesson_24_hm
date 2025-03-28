@@ -11,6 +11,11 @@ public class Main {
         studentList.add(new Student("Cecil", "Braun", "cecil.braun@gmail.com", "Group 22b"));
         studentList.add(new Student("Daniel", "Blue", "daniel.blue@gmail.com", "Group 22b"));
         studentList.add(new Student("Ervin", "Green", "ervin.green@gmail.com", "Group 3a"));
+        List<Student> studentList1 = new ArrayList<>();
+        studentList1.add(new Student("Karl", "Yellow", "Karl.yellow@gmail.com", "Group 22b"));
+        studentList1.add(new Student("Laura", "Orange", "laura.orange@gmail.com", "Group 22b"));
+        studentList1.add(new Student("Norbert", "Purple", "norbert.purple@gmail.com", "Group 3a"));
+
 
         System.out.println(" ------ home + class work -------");
         Student.homeWork(studentList, "Ervin", "Green");
@@ -41,13 +46,20 @@ public class Main {
         System.out.println("------- predicate by group----------");
         Students.print(Students.filter(studentList, new PredicateByGroup("group 22b")));
 
-        System.out.println("------- check Student in the list----------");
+        System.out.println("------- check is the Student in the list ? ----------");
         Students.checkStudent(studentList, "barby", "black");
         Students.checkStudent(studentList, "barby", "white");
 
         System.out.println("------- extractors ----------");
         printList(Students.extract(studentList, new ExtractorByFirstLastNameGroup()));
         printList(Students.extract(studentList, new ExtractByLastNameEmail()));
+
+        System.out.println("------- Merging two lists ----------");
+        Students.print(Students.mergeTwoLists(studentList, studentList1));
+
+
+
+
 
 
     }
